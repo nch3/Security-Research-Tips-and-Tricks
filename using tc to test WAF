@@ -13,5 +13,8 @@
 **sudo tc qdisc add dev enp0s3 root netem duplicate 10%:**
   Adds `netem` queue discipline to `enp0s3` with 10% packet duplication.
 
-**sudo tc qdisc add dev enp0s3 root netem delay 100ms loss 10% duplicate 10%**
+**sudo tc qdisc add dev enp0s3 root netem reorder 25%**
+  Randomly reorders 25% of packets in the queue.
+
+**sudo tc qdisc add dev enp0s3 root netem delay 100ms loss 10% duplicate 10% reorder 25%**
   All in one
