@@ -1,0 +1,17 @@
+**sudo tc qdisc show dev enp0s3 root:**
+  Displays queue discipline information for `enp0s3`.
+
+**sudo tc qdisc del dev enp0s3 root:**
+  Removes queue discipline for `enp0s3`.
+
+**sudo tc qdisc add dev enp0s3 root netem delay 100ms:**
+  Adds `netem` queue discipline to `enp0s3` with 100ms delay.
+
+**sudo tc qdisc add dev enp0s3 root netem loss 10%:**
+  Adds `netem` queue discipline to `enp0s3` with 10% packet loss.
+
+**sudo tc qdisc add dev enp0s3 root netem duplicate 10%:**
+  Adds `netem` queue discipline to `enp0s3` with 10% packet duplication.
+
+**sudo tc qdisc add dev enp0s3 root netem delay 100ms loss 10% duplicate 10%**
+  All in one
