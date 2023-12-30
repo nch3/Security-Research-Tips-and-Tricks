@@ -1,0 +1,19 @@
+#Disable time synchronization for a virtual machine.
+
+Run a command on the host in the CLI:
+
+sudo VBoxManage setextradata "LinuxVM_name" "VBoxInternal/Devices/VMMDev/0/Config/GetHostTimeDisabled" "1"
+
+#Run LinuxVM and disable NTP synchronization
+
+sudo timedatectl set-ntp off
+
+# Set date
+
+sudo timedatectl set-time '1999-01-01 12:00:00'
+
+or
+
+sudo timedatectl set-time '2077-01-01 12:00:00'
+
+
